@@ -1,107 +1,53 @@
-// 31 JS LESSON ------------------------------------------------
+// 31 Типы данных: Строки ------------------------------------------------
 
-// ----------------CLASSWORK
+// 1. Напишите скрипт, в которую вводится имя человека и выводится на экран приветствие в виде слова «Привет», после которого должна стоять запятая, введенное имя и восклицательный знак. После запятой должен стоять пробел, а перед восклицательным знаком пробела быть не должно. Пример: "Привет, Вася!"
 
-// let userName = prompt ("What is your name?");
-// document.write(`Hello, ${userName}! <br>`);
-
-// let footballTeam = prompt ("What is your favorite football team?");
-// document.write(`${footballTeam.toUpperCase()} is champion <br>`);
-
-// let cardNumber = prompt ("Enter your card number");
-// let cardNumberTrim = cardNumber.trim();
-// document.write(`Last four characters of your card number: ${cardNumberTrim.slice(9, 13)} <br>`);
-
-// ----------------HOMEWORK
-
-
-// first task -------
-
-// let string = prompt ("Enter your string");
-// let firstLetterCapital = string.slice(0, 1).toUpperCase() + string.substring(1).toLowerCase();
-
-// document.write(`Hello, ${firstLetterCapital}!`);
-// console.log(`Hello, ${firstLetterCapital}!`);
+let userName = prompt ("What is your name?");
+document.write(`Hello, ${userName}! <br>`);
 
 
 
-// second task -------
+// 2. Составить скрипт, который запрашивает название футбольной команды и выводит его на экране со словами «это чемпион!». Пример: "REAL MADRID это чемпион!"
 
-// let total = "$120";
-// document.write(total.slice(1));
-
-
+let footballTeam = prompt ("What is your favorite football team?");
+document.write(`${footballTeam.toUpperCase()} is champion <br>`);
 
 
-// third task --------
 
-// let ask = prompt ("Здравствуй, я компьютер, а тебя как зовут?");
-// let ask2 = prompt (`Очень приятно, ${ask}. Сколько тебе лет?`);
-// let age = prompt (`Ого! Тебе уже ${ask2}!`);
+// 3. Имеется строка "иВан" , нужно обработать эту строку и получить правильное написание в виде "Иван"
+
+let string = prompt ("Enter your name");
+let firstLetterCapital = string.slice(0, 1).toUpperCase() + string.substring(1).toLowerCase();
+
+document.write(`Hello, ${firstLetterCapital}!`);
+console.log(`Hello, ${firstLetterCapital}!`);
+
+
+
+// 4. Есть стоимость в виде строки "$120". Сначала идёт знак валюты, а затем – число. Необходимо извлечь стоимость без знака $ т.е. из строки "$120" нужно получить "120"
+
+let total = "$120";
+document.write(total.slice(1));
 
 
 
 
-// fourth task --------
+// 5. Напишите программу, которая осуществляла бы такой диалог человека с компьютером:
+// КОМПЬЮТЕР ВЫВОДИТ НА ЭКРАН: Здравствуй, я компьютер, а тебя как зовут?
+// ЧЕЛОВЕК ВВОДИТ С КЛАВИАТУРЫ:  Коля*
+// КОМПЬЮТЕР ВЫВОДИТ НА ЭКРАН:  Очень приятно, Коля. Сколько тебе лет?
+// ЧЕЛОВЕК ВВОДИТ С КЛАВИАТУРЫ:  16*
+// КОМПЬЮТЕР ВЫВОДИТ НА ЭКРАН:   Ого! Тебе уже 16!
 
-// let card = prompt ("Enter your card number");
-// alert(`Номер Вашей кредитной карты: ${card.replace(card.slice(0, -4), "************")}`);
-// console.log(`Номер Вашей кредитной карты: ${card.replace(card.slice(0, -4), "************")}`);
+let ask = prompt ("Здравствуй, я компьютер, а тебя как зовут?");
+let ask2 = prompt (`Очень приятно, ${ask}. Сколько тебе лет?`);
+let age = prompt (`Ого! Тебе уже ${ask2}!`);
 
 
-// switch (5) {
-// 		case 5:
-// 			console.log("5");
-// 		case 6:
-// 			console.log("6");
-// 			break;
 
-// 		case 7:
-// 			console.log("7");
-// 		case 8:
-// 			console.log("8");
-// }
 
-// const foo = ({ password, ...data }) => data
-// const user = {
-// 	id: 100,
-// 	name: 'Howard Moon',
-// 	password: 'Password!',
-// }
-// console.log(foo(user));
-// document.write(foo(user));
+// 6. Составить скрипт, который запрашивает у пользователя ввести номер кредитной карты. Скрипт должен обработать полученный номер и показать на странице последние 4 цифры карты. Пример: "Номер вашей карты: **********1245"
 
-// const site = "proghub"
-// console.log(site());
-
-// [1, 2 , 3].map(num => {
-// 	if(typeof num === "number") return;
-// 	return num * 2;
-// });
-
-// var point = [1, 3],
-// segment = [point, [5, 5]];
-// triangle = [...segment, [1, 8]];
-
-// console.log(triangle);
-
-// var a = 3;
-
-// switch (a){
-// 	default:
-// 		a +=4;
-// 	case 1:
-// 		a +=2;
-// 		break;
-// 	case 2:
-// 		a +=3;
-// 		break;
-// }
-
-// console.log(a);
-
-// var a = [];
-// console.log((a == a) + '' + (a == !a));
-
-// class Something {}
-// console.log(typeof Something);
+let card = prompt ("Enter your card number");
+alert(`Номер Вашей кредитной карты: ${card.replace(card.slice(0, -4), "************")}`);
+console.log(`Номер Вашей кредитной карты: ${card.replace(card.slice(0, -4), "************")}`);
